@@ -1,0 +1,153 @@
+{
+    "root": {
+        "data": {
+            "id": "cr09b6jq2140",
+            "created": 1678202990237,
+            "text": "产品名称"
+        },
+        "children": [
+            {
+                "data": {
+                    "id": "cr09cpkus8w0",
+                    "created": 1678203110028,
+                    "text": "模块1",
+                    "note": null,
+                    "priority": null
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cr09e9vpbpc0",
+                            "created": 1678203232584,
+                            "text": "测试用例1",
+                            "note": "前置步骤\n",
+                            "priority": 1
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cr09ede8jl40",
+                                    "created": 1678203240235,
+                                    "text": "步骤1"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cr09emsk5q80",
+                                            "created": 1678203260692,
+                                            "text": "期望1"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cr09e9vpbpc0",
+                            "created": 1678203232584,
+                            "text": "测试用例2",
+                            "note": "前置步骤\n",
+                            "priority": 2
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cr09ede8jl40",
+                                    "created": 1678203240235,
+                                    "text": "步骤1"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cr09emsk5q80",
+                                            "created": 1678203260692,
+                                            "text": "期望1"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cr09e9vpbpc0",
+                            "created": 1678203232584,
+                            "text": "测试用例3",
+                            "note": "前置步骤\n",
+                            "priority": 3
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cr09ede8jl40",
+                                    "created": 1678203240235,
+                                    "text": "步骤1"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cr09emsk5q80",
+                                            "created": 1678203260692,
+                                            "text": "期望1"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cr09e9vpbpc0",
+                            "created": 1678203232584,
+                            "text": "测试用例4",
+                            "note": "前置步骤\n",
+                            "priority": null,
+                            "layout_right_offset": {
+                                "x": -7,
+                                "y": 0
+                            }
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cr09ede8jl40",
+                                    "created": 1678203240235,
+                                    "text": "步骤1"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cr09emsk5q80",
+                                            "created": 1678203260692,
+                                            "text": "期望1"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cr09dxj5jgo0",
+                    "created": 1678203205705,
+                    "text": "模块2",
+                    "layout_mind_offset": {
+                        "x": 431,
+                        "y": 137
+                    }
+                },
+                "children": []
+            }
+        ]
+    },
+    "template": "right",
+    "theme": "fresh-blue",
+    "version": "1.4.43"
+}
