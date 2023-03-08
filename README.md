@@ -57,16 +57,24 @@ pip install -e ./
 
 Using [vscode-mindmap extension](https://marketplace.visualstudio.com/items?itemName=Souche.vscode-mindmap) on vscode
 
+or Using [DesktopNaotu](https://github.com/NaoTu/DesktopNaotu) locally
+
+or Using Web: https://naotu.baidu.com/
+
 ![1678242422431](image/README/1678242422431.png)
 
-# Why vscode-mindmap(Why not XMind)
+# Why Kity Minder(Why not XMind)
 
-- XMind is commercial software, [vscode-mindmap](https://github.com/souche/vscode-mindmap) is open-resource
+- XMind is commercial software, [Kity Minder](https://github.com/fex-team/kityminder) is open-resource
 - XMind's performance is poor when there are many cases
 - Difficulty in versioning binary files using XMind
 
 # Thanks
 
-Inspired by [xmind2testcase](https://github.com/zhuifengshen/xmind2testcase)
+Inspired by:
 
-pip install -e ./
+- [xmind2testcase](https://github.com/zhuifengshen/xmind2testcase)
+
+Based on:
+
+- [Kity Minder](https://github.com/fex-team/kityminder)
