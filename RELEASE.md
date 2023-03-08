@@ -1,4 +1,4 @@
-# Making a new release of jupyter_kernel_client
+# Making a new release of km2testcase
 
 ## Manual release
 
