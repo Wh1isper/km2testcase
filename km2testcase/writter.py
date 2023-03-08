@@ -1,6 +1,7 @@
 #  Copyright (c) 2023 Wh1isper
 #  Licensed under the BSD 3-Clause License
 #  Created by @Wh1isper 2023/1/4
+import csv
 from pathlib import Path
 from typing import List
 
@@ -16,5 +17,11 @@ def write(models: List[PlatformModel], output_path: Path, output_type: str):
 
 
 def write_to_csv(models: List[CsvMixin], output_path: Path):
-    # header = models[0].csv_header()
-    pass
+    if not models:
+        print("No models to write!")
+        return
+    header = models[0].csv_header()
+    with open(output_path, "w") as csvfile:
+        w = csv.writer(csvfile)
+        w.writerow(header)
+        w.writerows((r.csv_format() for r in models))

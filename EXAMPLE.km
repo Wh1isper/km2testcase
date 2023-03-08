@@ -49,23 +49,77 @@
                             "created": 1678203232584,
                             "text": "测试用例2",
                             "note": "前置步骤\n",
-                            "priority": 2
+                            "priority": null
                         },
                         "children": [
                             {
                                 "data": {
                                     "id": "cr09ede8jl40",
                                     "created": 1678203240235,
-                                    "text": "步骤1"
+                                    "text": "子用例1",
+                                    "priority": 2
                                 },
                                 "children": [
                                     {
                                         "data": {
-                                            "id": "cr09emsk5q80",
-                                            "created": 1678203260692,
-                                            "text": "期望1"
+                                            "id": "cr09ede8jl40",
+                                            "created": 1678203240235,
+                                            "text": "步骤1"
                                         },
-                                        "children": []
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cr09emsk5q80",
+                                                    "created": 1678203260692,
+                                                    "text": "期望1"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cr09ede8jl40",
+                                            "created": 1678203240235,
+                                            "text": "步骤2"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cr09emsk5q80",
+                                                    "created": 1678203260692,
+                                                    "text": "期望2"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cr0agrtc73c0",
+                                    "created": 1678206249461,
+                                    "text": "子用例2",
+                                    "priority": 1
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cr09ede8jl40",
+                                            "created": 1678203240235,
+                                            "text": "步骤1"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cr09emsk5q80",
+                                                    "created": 1678203260692,
+                                                    "text": "期望1"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
                                     }
                                 ]
                             }
@@ -104,7 +158,7 @@
                             "id": "cr09e9vpbpc0",
                             "created": 1678203232584,
                             "text": "测试用例4",
-                            "note": "前置步骤\n",
+                            "note": null,
                             "priority": null,
                             "layout_right_offset": {
                                 "x": -7,
@@ -130,6 +184,14 @@
                                 ]
                             }
                         ]
+                    },
+                    {
+                        "data": {
+                            "id": "cr09yi8bv4w0",
+                            "created": 1678204818045,
+                            "text": "测试用例5"
+                        },
+                        "children": []
                     }
                 ]
             },
