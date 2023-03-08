@@ -33,7 +33,7 @@ km2testcase EXAMPLE.km --details true
 
 ### Zentao
 
-Given that vscode-mindmap does not provide more labels, the type and stage of the use case use environment
+Given that kity minder does not provide more labels, the type and stage of the use case use environment
 variables `ZENTAO_CASE_TYPE` and `ZENTAO_STAGE`
 
 # Develop
