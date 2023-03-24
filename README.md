@@ -1,3 +1,5 @@
+Ensure that new features are covered by unit tests
+
 ![](https://img.shields.io/github/license/wh1isper/km2testcase)
 ![](https://img.shields.io/github/v/release/wh1isper/km2testcase)
 ![](https://img.shields.io/pypi/dm/km2testcase)
@@ -38,7 +40,7 @@ variables `ZENTAO_CASE_TYPE` and `ZENTAO_STAGE`
 
 # Develop
 
-Install pre-commit before commit:
+Install pre-commit before commit
 
 ```
 pip install pre-commit
@@ -51,7 +53,11 @@ Install package locally
 pip install -e .[test]
 ```
 
-**Compatibility with more platforms or additional test cases are currently in demand**
+Run unit-test before PR, **ensure that new features are covered by unit tests**
+
+```
+pytest -v
+```
 
 # Practice
 
