@@ -1,0 +1,90 @@
+{
+    "root": {
+        "data": {
+            "id": "cr09b6jq2140",
+            "created": 1678202990237,
+            "text": "产品名称"
+        },
+        "children": [
+            {
+                "data": {
+                    "id": "cr09cpkus8w0",
+                    "created": 1678203110028,
+                    "text": "模块1",
+                    "note": null,
+                    "priority": null,
+                    "layout": null
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cr09e9vpbpc0",
+                            "created": 1678203232584,
+                            "text": "测试用例",
+                            "note": "前置步骤",
+                            "priority": null,
+                            "expandState": "expand",
+                            "layout": null
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cr09ede8jl40",
+                                    "created": 1678203240235,
+                                    "text": "步骤2",
+                                    "layout": null
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cr09emsk5q80",
+                                            "created": 1678203260692,
+                                            "text": "期望2",
+                                            "layout": null
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cr09ede8jl40",
+                                    "created": 1678203240235,
+                                    "text": "子用例1",
+                                    "priority": null,
+                                    "layout": null,
+                                    "expandState": "expand",
+                                    "note": "前置步骤2"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cr09ede8jl40",
+                                            "created": 1678203240235,
+                                            "text": "步骤1",
+                                            "layout": null
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cr09emsk5q80",
+                                                    "created": 1678203260692,
+                                                    "text": "期望1",
+                                                    "layout": null
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "template": "right",
+    "theme": "fresh-blue",
+    "version": "1.4.43"
+}
