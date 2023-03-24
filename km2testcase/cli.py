@@ -25,7 +25,7 @@ def cli(markdown_file_path, output, encoding, details, output_type="csv", platfo
         output = markdown_path.with_suffix("." + suffix)
     else:
         output = Path(output)
-    case_models = parse_km(markdown_path, encoding=encoding)
+    case_models = parse_km(markdown_path, encoding=encoding, echo=details)
     print(f"{len(case_models)} testcases parsed.")
     if not case_models:
         print("No testcase found, exiting...")

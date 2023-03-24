@@ -25,8 +25,37 @@ Options:
 
 Using [EXAMPLE.km](EXAMPLE.km)
 
+![1678242422431](image/README/1678242422431.png)
+
 ```
-km2testcase EXAMPLE.km --details true
+$ km2testcase EXAMPLE.km --details true
+
+Parsing km file EXAMPLE.km
+Collect case: project_name='产品名称' model_name='模块1' case_name='测试用例1' priority=1 prepare='前置步骤' steps=[Step(step='步骤1', expect='期望1')]
+Found subcase: 测试用例2-子用例1
+Collect case: project_name='产品名称' model_name='模块1' case_name='测试用例2-子用例1' priority=2 prepare='前置步骤\n-----------------------------\n子用例前置条件1' steps=[Step(step='步骤1', e
+xpect='期望1'), Step(step='步骤2', expect='期望2')]
+Found subcase: 测试用例2-子用例2
+Collect case: project_name='产品名称' model_name='模块1' case_name='测试用例2-子用例2' priority=1 prepare='前置步骤' steps=[Step(step='步骤1', expect='期望1')]
+Collect case: project_name='产品名称' model_name='模块1' case_name='测试用例3' priority=3 prepare='前置步骤' steps=[Step(step='步骤1', expect='期望1')]
+Collect case: project_name='产品名称' model_name='模块1' case_name='测试用例4' priority=2 prepare=None steps=[Step(step='步骤1', expect='期望1')]
+Collect case: project_name='产品名称' model_name='模块1' case_name='测试用例5' priority=2 prepare=None steps=[Step(step='步骤1', expect='期望1')]
+6 testcases parsed.
+Converted project_name='产品名称' model_name='模块1' case_name='测试用例1' priority=1 prepare='前置步骤' steps=[Step(step='步骤1', expect='期望1')] -> model_name='模块1' case_name='测试用例1'
+priority='高' prepare='前置步骤' step='1. 步骤1' expect='1. 期望1' case_type='功能测试' stage='功能测试阶段'
+Converted project_name='产品名称' model_name='模块1' case_name='测试用例2-子用例1' priority=2 prepare='前置步骤\n-----------------------------\n子用例前置条件1' steps=[Step(step='步骤1', expec
+t='期望1'), Step(step='步骤2', expect='期望2')] -> model_name='模块1' case_name='测试用例2-子用例1' priority='中' prepare='前置步骤\n-----------------------------\n子用例前置条件1' step='1. 步
+骤1\n2. 步骤2' expect='1. 期望1\n2. 期望2' case_type='功能测试' stage='功能测试阶段'
+Converted project_name='产品名称' model_name='模块1' case_name='测试用例2-子用例2' priority=1 prepare='前置步骤' steps=[Step(step='步骤1', expect='期望1')] -> model_name='模块1' case_name='测
+试用例2-子用例2' priority='高' prepare='前置步骤' step='1. 步骤1' expect='1. 期望1' case_type='功能测试' stage='功能测试阶段'
+Converted project_name='产品名称' model_name='模块1' case_name='测试用例3' priority=3 prepare='前置步骤' steps=[Step(step='步骤1', expect='期望1')] -> model_name='模块1' case_name='测试用例3'
+priority='低' prepare='前置步骤' step='1. 步骤1' expect='1. 期望1' case_type='功能测试' stage='功能测试阶段'
+Converted project_name='产品名称' model_name='模块1' case_name='测试用例4' priority=2 prepare=None steps=[Step(step='步骤1', expect='期望1')] -> model_name='模块1' case_name='测试用例4' priori
+ty='中' prepare='' step='1. 步骤1' expect='1. 期望1' case_type='功能测试' stage='功能测试阶段'
+Converted project_name='产品名称' model_name='模块1' case_name='测试用例5' priority=2 prepare=None steps=[Step(step='步骤1', expect='期望1')] -> model_name='模块1' case_name='测试用例5' priori
+ty='中' prepare='' step='1. 步骤1' expect='1. 期望1' case_type='功能测试' stage='功能测试阶段'
+Writing testcases to EXAMPLE.csv
+All testcases written
 ```
 
 ## Advance config
@@ -64,8 +93,6 @@ Using [vscode-mindmap extension](https://marketplace.visualstudio.com/items?item
 or Using [DesktopNaotu](https://github.com/NaoTu/DesktopNaotu) locally
 
 or Using Web: https://naotu.baidu.com/
-
-![1678242422431](image/README/1678242422431.png)
 
 # Why Kity Minder(Why not XMind)
 
