@@ -1,5 +1,3 @@
-Ensure that new features are covered by unit tests
-
 ![](https://img.shields.io/github/license/wh1isper/km2testcase)
 ![](https://img.shields.io/github/v/release/wh1isper/km2testcase)
 ![](https://img.shields.io/pypi/dm/km2testcase)
