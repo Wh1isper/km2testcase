@@ -40,6 +40,9 @@ class KNode:
         else:
             self.node["data"]["note"] = f"\n{PREPARE_SEP}\n".join([s, self.note])
 
+    def __repr__(self):
+        return self.content
+
 
 class Step(pydantic.BaseModel):
     step: str
