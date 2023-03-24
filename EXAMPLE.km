@@ -20,7 +20,7 @@
                             "id": "cr09e9vpbpc0",
                             "created": 1678203232584,
                             "text": "测试用例1",
-                            "note": "前置步骤\n",
+                            "note": "前置步骤",
                             "priority": 1
                         },
                         "children": [
@@ -48,7 +48,7 @@
                             "id": "cr09e9vpbpc0",
                             "created": 1678203232584,
                             "text": "测试用例2",
-                            "note": "前置步骤\n",
+                            "note": "前置步骤",
                             "priority": null
                         },
                         "children": [
@@ -57,7 +57,8 @@
                                     "id": "cr09ede8jl40",
                                     "created": 1678203240235,
                                     "text": "子用例1",
-                                    "priority": 2
+                                    "priority": 2,
+                                    "note": "子用例前置条件1"
                                 },
                                 "children": [
                                     {
@@ -130,7 +131,7 @@
                             "id": "cr09e9vpbpc0",
                             "created": 1678203232584,
                             "text": "测试用例3",
-                            "note": "前置步骤\n",
+                            "note": "前置步骤",
                             "priority": 3
                         },
                         "children": [
@@ -191,7 +192,25 @@
                             "created": 1678204818045,
                             "text": "测试用例5"
                         },
-                        "children": []
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cr09ede8jl40",
+                                    "created": 1678203240235,
+                                    "text": "步骤1"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cr09emsk5q80",
+                                            "created": 1678203260692,
+                                            "text": "期望1"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
                     }
                 ]
             },

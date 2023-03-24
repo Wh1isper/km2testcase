@@ -48,7 +48,7 @@ pre-commit install
 Install package locally
 
 ```
-pip install -e ./
+pip install -e .[test]
 ```
 
 **Compatibility with more platforms or additional test cases are currently in demand**
