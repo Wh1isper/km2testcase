@@ -8,32 +8,56 @@ from typing import List
 from km2testcase.model import CaseModel, KNode, Step
 
 
-def _recursive_case(case: KNode, project_name, model_name, case_models):
-    if (
-        not case.children
-        or not KNode(case.children[0]).children
-        or not KNode(KNode(case.children[0]).children[0]).children
-    ):
-        case_models.append(
-            CaseModel(
-                project_name=project_name,
-                model_name=model_name,
-                case_name=case.content,
-                priority=case.priority,
-                prepare=case.note,
-                steps=[Step.from_node(KNode(step)) for step in case.children],
-            )
-        )
-    else:
-        for sub_case in case.children:
-            sub_case = KNode(sub_case)
-            sub_case.add_parent_content(case.content)
-            _recursive_case(sub_case, project_name, model_name, case_models)
+def _recursive_case(
+    case: KNode,
+    project_name,
+    model_name,
+    case_models,
+):
+    if not case.children:
+        # invalid, skip
+        return
+
+    for child in case.children:
+        child = KNode(child)
+        if not child.children:
+            # invalid, skip
+            continue
+
+        for grandson in child.children:
+            grandson = KNode(grandson)
+            if grandson.children:
+                # child is not a step, but a subcase
+                child.add_parent_content(case.content)
+                child.add_parent_note(case.note)
+                _recursive_case(child, project_name, model_name, case_models)
+                break
+            else:
+                # child is a Step, collect all step
+                steps = []
+                for step in case.children:
+                    step = KNode(step)
+                    for expect in step.children:
+                        expect = KNode(expect)
+                        if not expect.children:
+                            steps.append(Step.from_node(step))
+
+                case_models.append(
+                    CaseModel(
+                        project_name=project_name,
+                        model_name=model_name,
+                        case_name=case.content,
+                        priority=case.priority,
+                        prepare=case.note,
+                        steps=steps,
+                    )
+                )
+                return
 
 
-def parse_km(file_path: Path) -> List[CaseModel]:
+def parse_km(file_path: Path, encoding="utf-8") -> List[CaseModel]:
     print(f"Parsing km file {file_path}")
-    with open(file_path) as f:
+    with open(file_path, encoding=encoding) as f:
         ast = json.load(f)
 
     case_models = []

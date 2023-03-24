@@ -8,6 +8,8 @@ import pydantic
 
 from km2testcase.writter_mixin import CsvMixin
 
+PREPARE_SEP = "-----------------------------"
+
 
 class KNode:
     def __init__(self, node):
@@ -31,6 +33,12 @@ class KNode:
 
     def add_parent_content(self, s):
         self.node["data"]["text"] = "-".join([s, self.content])
+
+    def add_parent_note(self, s):
+        if not self.note:
+            self.node["data"]["note"] = s
+        else:
+            self.node["data"]["note"] = f"\n{PREPARE_SEP}\n".join([s, self.note])
 
 
 class Step(pydantic.BaseModel):
