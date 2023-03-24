@@ -24,35 +24,31 @@ def _recursive_case(
             # invalid, skip
             continue
 
-        for grandson in child.children:
-            grandson = KNode(grandson)
-            if grandson.children:
-                # child is not a step, but a subcase
-                child.add_parent_content(case.content)
-                child.add_parent_note(case.note)
-                _recursive_case(child, project_name, model_name, case_models)
-                break
-            else:
-                # child is a Step, collect all step
-                steps = []
-                for step in case.children:
-                    step = KNode(step)
-                    for expect in step.children:
-                        expect = KNode(expect)
-                        if not expect.children:
-                            steps.append(Step.from_node(step))
+        if any(KNode(g).children for g in child.children):
+            # child is a subcase, step into
+            child.add_parent_content(case.content)
+            child.add_parent_note(case.note)
+            _recursive_case(child, project_name, model_name, case_models)
 
-                case_models.append(
-                    CaseModel(
-                        project_name=project_name,
-                        model_name=model_name,
-                        case_name=case.content,
-                        priority=case.priority,
-                        prepare=case.note,
-                        steps=steps,
-                    )
-                )
-                return
+    # Collect steps in this case
+    steps = []
+    for step in case.children:
+        step = KNode(step)
+        for expect in step.children:
+            expect = KNode(expect)
+            if not expect.children:
+                steps.append(Step.from_node(step))
+    if steps:
+        case_models.append(
+            CaseModel(
+                project_name=project_name,
+                model_name=model_name,
+                case_name=case.content,
+                priority=case.priority,
+                prepare=case.note,
+                steps=steps,
+            )
+        )
 
 
 def parse_km(file_path: Path, encoding="utf-8") -> List[CaseModel]:
