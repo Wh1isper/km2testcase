@@ -119,7 +119,17 @@ class ZentaoModel(PlatformModel, CsvMixin):
 
     @classmethod
     def csv_header(cls):
-        return ["所属模块", "用例标题", "前置条件", "步骤", "预期", "关键词", "优先级", "用例类型", "适用阶段"]
+        return [
+            "所属模块",
+            "用例标题",
+            "前置条件",
+            "步骤",
+            "预期",
+            "关键词",
+            "优先级",
+            "用例类型",
+            "适用阶段",
+        ]
 
     def csv_format(self):
         return [
